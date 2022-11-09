@@ -1,19 +1,5 @@
 "BrowseScreen1 As screen.'phoneBrowseLayout_ver3.0'":
 
-    RectQuickActionBar1 As rectangle:
-        Height: =88
-        Width: =640
-        ZIndex: =1
-
-    LblAppName1 As label:
-        Fill: =RGBA(58, 58, 58, 0)
-        Height: =88
-        Size: =27
-        Text: ="cr725_Quests"
-        Width: =640
-        Wrap: =false
-        ZIndex: =2
-
     IconRefresh1 As icon.Reload:
         AccessibleLabel: =Self.Tooltip
         Height: =88
@@ -73,8 +59,8 @@
         RadiusTopLeft: =0
         RadiusTopRight: =7
         Size: =21
-        Width: =640
-        Y: =RectQuickActionBar1.Height
+        Width: =1136
+        Y: =88
         ZIndex: =6
 
     SearchIcon1 As icon.Search:
@@ -98,13 +84,15 @@
         ZIndex: =8
 
     "BrowseGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
-        Height: =640
+        Height: =404
         Items: =SortByColumns(Search([@cr725_Quests], TextSearchBox1.Text, "cr725_activitytype","cr725_briefdescription","cr725_classificationdesc"), "cr725_activitytype", If(SortDescending1, Descending, Ascending))
         Layout: =Layout.Vertical
         OnSelect: =Navigate(DetailScreen1, ScreenTransition.None)
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
+        Width: =1136
+        Y: =236
         ZIndex: =9
 
         Title1 As label:
@@ -143,7 +131,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Activity Type'
+            Text: =ThisItem.'Brief Description'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
