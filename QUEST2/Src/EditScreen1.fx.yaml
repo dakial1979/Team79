@@ -46,10 +46,11 @@
 
     EditForm1 As form:
         DataSource: =[@cr725_Quests]
-        Height: =640
+        Height: =Parent.Height - EditForm1.Y
         Item: =BrowseGallery1.Selected
         OnSuccess: =Back()
         Width: =640
+        Y: =RectQuickActionBar3.Height
         ZIndex: =5
 
         "'Report#_DataCard2' As typedDataCard.textualEditCard":
