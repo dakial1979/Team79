@@ -142,6 +142,7 @@ Screen1 As screen:
         ZIndex: =4
 
     DatePicker1 As datepicker:
+        DefaultDate: =Today()-28
         Height: =45
         Size: =12
         Width: =174
