@@ -62,10 +62,10 @@
 
     DetailForm1 As formViewer:
         DataSource: =[@cr725_Quests]
-        Height: =Parent.Height - DetailForm1.Y
+        Height: =552
         Item: =BrowseGallery1.Selected
         Width: =Parent.Width
-        Y: =RectQuickActionBar2.Y + RectQuickActionBar2.Height
+        Y: =87
         ZIndex: =6
 
         "'Report#_DataCard1' As typedDataCard.textualViewCard":
@@ -143,5 +143,81 @@
                 Width: =Parent.Width - 60
                 X: =30
                 Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                ZIndex: =2
+
+        "'Brief Description_DataCard1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="cr725_briefdescription"
+            Default: =ThisItem.'Brief Description'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@cr725_Quests],DataSourceInfo.DisplayName,"cr725_briefdescription")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =1136
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey5 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                ZIndex: =2
+
+        "'Detailed Description_DataCard1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="cr725_detaileddescription"
+            Default: =ThisItem.'Detailed Description'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@cr725_Quests],DataSourceInfo.DisplayName,"cr725_detaileddescription")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =1136
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey6 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue6 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
                 ZIndex: =2
 

@@ -91,14 +91,14 @@
     "DocumentLayoutWidth": 1136,
     "DocumentType": "App",
     "EnableInstrumentation": false,
-    "FileID": "e06bb867-8476-49e0-b964-66887f5bd1b0",
-    "Id": "e06bb867-8476-49e0-b964-66887f5bd1b0",
+    "FileID": "c401f9a0-8679-4468-8bab-71283c216cc0",
+    "Id": "c401f9a0-8679-4468-8bab-71283c216cc0",
     "InstrumentationKey": "",
-    "Name": "Team-79-GitHubv2",
+    "Name": "Team 79 App V1",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "Team-79-GitHub",
+    "AppName": "Team 79 App V1",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
