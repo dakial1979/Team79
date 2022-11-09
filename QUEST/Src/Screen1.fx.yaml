@@ -1,0 +1,177 @@
+Screen1 As screen:
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =414
+        Items: |-
+            =If(IsBlank(TextInput1),
+            
+            Sort(Filter(cr725_Quests, (Facility=Dropdown1.SelectedText.Value) && ('Hazard Description'=Dropdown2.SelectedText.Value) && ('Report Date' > DatePicker1.SelectedDate) && ('Report Date'< DatePicker1_1.SelectedDate)),'Report Date',Descending),
+            Sort(Filter(cr725_Quests, ((TextInput1.Text in 'Report#') || (TextInput1.Text in 'Detailed Description')) &&
+               (Facility=Dropdown1.SelectedText.Value) && ('Hazard Description'=Dropdown2.SelectedText.Value)&& ('Report Date' > DatePicker1.SelectedDate)&& ('Report Date'< DatePicker1_1.SelectedDate)),'Report Date',Descending))
+        Layout: =Layout.Vertical
+        TemplateFill: =If(ThisItem.'Classification Desc'="Hazardous Situation", Green, If(ThisItem.'Classification Desc'="Near Accident/Near Miss", Yellow,Red))
+        TemplatePadding: =0
+        TemplateSize: =97
+        Width: =1068
+        X: =40
+        Y: =177
+        ZIndex: =1
+
+        Subtitle2 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Activity Type'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =
+            X: =
+            Y: =
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator2 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label1 As label:
+            Height: =32
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                =ThisItem.'Report#'
+            Width: =152
+            ZIndex: =6
+
+        Label2 As label:
+            Height: =32
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.'Report Date'
+            Width: =154
+            X: =152
+            ZIndex: =7
+
+        Label3 As label:
+            Height: =32
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Brief Description'
+            Width: =294
+            Wrap: =false
+            X: =306
+            ZIndex: =8
+
+        Label4 As label:
+            Align: =Align.Center
+            Height: =27
+            OnSelect: =Select(Parent)
+            Size: =8
+            Text: =ThisItem.'Hazard Description'
+            Width: =231
+            X: =600
+            Y: =5
+            ZIndex: =9
+
+        Checkbox1 As checkbox:
+            CheckboxSize: |
+                =35
+            Height: =32
+            OnSelect: =Select(Parent)
+            Size: =8
+            Text: ="Acknowledged"
+            Width: =122
+            X: =858
+            ZIndex: =10
+
+        Label5 As label:
+            Height: =55
+            OnSelect: =Select(Parent)
+            Size: =8
+            Text: =ThisItem.'Detailed Description'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =1003
+            Y: =32
+            ZIndex: =11
+
+    Dropdown1 As dropdown:
+        Height: =44
+        Items: =Distinct(cr725_Quests,Facility)
+        Size: =12
+        Width: =318
+        X: =40
+        Y: =40
+        ZIndex: =2
+
+    Dropdown2 As dropdown:
+        Height: =44
+        Items: =Distinct(cr725_Quests,'Hazard Description')
+        Size: =12
+        X: =393
+        Y: =40
+        ZIndex: =3
+
+    TextInput1 As text:
+        Default: =
+        Height: =44
+        Size: =12
+        Width: =345
+        X: =763
+        Y: =40
+        ZIndex: =4
+
+    DatePicker1 As datepicker:
+        DefaultDate: =Today()-28
+        Height: =45
+        Size: =12
+        Width: =174
+        X: =260
+        Y: =101
+        ZIndex: =5
+
+    Label6 As label:
+        Height: =45
+        Size: =21
+        Text: ="Earliest Date"
+        Width: =300
+        X: =40
+        Y: =101
+        ZIndex: =6
+
+    Label6_1 As label:
+        Height: =45
+        Size: =21
+        Text: ="Latest Date"
+        Width: =300
+        X: =463
+        Y: =101
+        ZIndex: =7
+
+    DatePicker1_1 As datepicker:
+        Height: =45
+        Size: =12
+        Width: =174
+        X: =663
+        Y: =101
+        ZIndex: =8
+
