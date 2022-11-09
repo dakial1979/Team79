@@ -176,3 +176,12 @@ Screen1 As screen:
         Y: =137
         ZIndex: =8
 
+    Button1 As button:
+        Height: =70
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =40
+        Y: =6
+        ZIndex: =9
+
