@@ -2,7 +2,7 @@
 
     RectQuickActionBar1 As rectangle:
         Height: =88
-        Width: =Parent.Width
+        Width: =640
         ZIndex: =1
 
     LblAppName1 As label:
@@ -10,9 +10,8 @@
         Height: =88
         Size: =27
         Text: ="cr725_Quests"
-        Width: =Parent.Width - Self.X - IconSortUpDown1.Width - IconNewItem1.Width - IconRefresh1.Width
+        Width: =640
         Wrap: =false
-        X: =20
         ZIndex: =2
 
     IconRefresh1 As icon.Reload:
@@ -27,7 +26,7 @@
         TabIndex: =0
         Tooltip: ="Refresh list"
         Width: =88
-        X: =Parent.Width - IconNewItem1.Width - IconSortUpDown1.Width - Self.Width
+        X: =552
         ZIndex: =3
 
     IconSortUpDown1 As icon.ArrowsUpDown:
@@ -43,7 +42,7 @@
         TabIndex: =0
         Tooltip: =If(SortDescending1, "Sort list in reverse alphabetical order", "Sort list in alphabetical order")
         Width: =88
-        X: =Parent.Width - IconNewItem1.Width - Self.Width
+        X: =552
         ZIndex: =4
 
     IconNewItem1 As icon.Add:
@@ -59,7 +58,7 @@
         TabIndex: =0
         Tooltip: ="Create new item"
         Width: =88
-        X: =Parent.Width - Self.Width
+        X: =552
         ZIndex: =5
 
     TextSearchBox1 As text:
@@ -74,7 +73,7 @@
         RadiusTopLeft: =0
         RadiusTopRight: =7
         Size: =21
-        Width: =Parent.Width
+        Width: =640
         Y: =RectQuickActionBar1.Height
         ZIndex: =6
 
@@ -94,7 +93,7 @@
 
     Rectangle11 As rectangle:
         Height: =2
-        Width: =Parent.Width
+        Width: =640
         Y: =TextSearchBox1.Y + TextSearchBox1.Height
         ZIndex: =8
 
@@ -106,7 +105,6 @@
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
-        Width: =Parent.Width
         Y: =TextSearchBox1.Y + TextSearchBox1.Height
         ZIndex: =9
 
